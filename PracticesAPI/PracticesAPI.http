@@ -1,0 +1,6 @@
+@PracticesAPI_HostAddress = http://localhost:5126
+
+GET {{PracticesAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

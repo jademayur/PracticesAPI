@@ -1,4 +1,5 @@
-﻿using PracticesAPI.Entity;
+﻿using Microsoft.EntityFrameworkCore;
+using PracticesAPI.Entity;
 
 namespace PracticesAPI.Data
 {

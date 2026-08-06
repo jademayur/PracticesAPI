@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PracticesAPI.Data;
-using PracticesAPI.DTOs;
+using PracticesAPI.DTOs.Emp;
 using PracticesAPI.Entity;
 using PracticesAPI.Interface;
 

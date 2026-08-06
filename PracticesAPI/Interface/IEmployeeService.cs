@@ -1,4 +1,4 @@
-﻿using PracticesAPI.DTOs;
+﻿using PracticesAPI.DTOs.Emp;
 
 namespace PracticesAPI.Interface
 {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PracticesAPI.DTOs;
+using PracticesAPI.DTOs.Emp;
 using PracticesAPI.Interface;
 
 namespace PracticesAPI.Controllers

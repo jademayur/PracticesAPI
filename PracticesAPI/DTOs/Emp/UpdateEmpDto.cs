@@ -1,4 +1,4 @@
-﻿namespace PracticesAPI.DTOs
+﻿namespace PracticesAPI.DTOs.Emp
 {
     public class UpdateEmpDto
     {

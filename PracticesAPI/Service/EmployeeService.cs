@@ -14,7 +14,7 @@ namespace PracticesAPI.Service
         {
             _context = context;
         }
-
+        //get all employees
         public async Task<EmployeeDto> GetEmployeeByIdAsync(int id)
         {
             var employee = await _context.Employees.FindAsync(id);
@@ -48,7 +48,7 @@ namespace PracticesAPI.Service
                 Salary = employee.Salary
             });
         }
-
+        //create employee
         public async Task<EmployeeDto> CreateEmployeeAsync(CreateEmpDto dto)
         {
             var employee = new Employee
@@ -74,6 +74,7 @@ namespace PracticesAPI.Service
             };
         }
 
+        //update employee
         public async Task<bool> UpdateEmployeeAsync(int id, UpdateEmpDto dto)
         {
             var employee = await _context.Employees.FindAsync(id);
@@ -89,6 +90,7 @@ namespace PracticesAPI.Service
             return true;
         }
 
+        //delete employee
         public async Task<bool> DeleteEmployeeAsync(int id)
         {
             var employee = await _context.Employees.FindAsync(id);

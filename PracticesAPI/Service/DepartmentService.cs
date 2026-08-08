@@ -1,4 +1,6 @@
-﻿using PracticesAPI.DTOs.Dept;
+﻿using Microsoft.EntityFrameworkCore;
+using PracticesAPI.Data;
+using PracticesAPI.DTOs.Dept;
 using PracticesAPI.Entity;
 using PracticesAPI.Interface;
 
@@ -11,7 +13,7 @@ namespace PracticesAPI.Service
         {
             _context = context;
         }
-
+        //get all departments
         public async Task<IEnumerable<DepartmentDto>> GetAllDepartmentsAsync()
         {
             var departments = await _context.Departments.ToListAsync();
@@ -21,7 +23,7 @@ namespace PracticesAPI.Service
                 DeptName = department.DeptName
             });
         }
-
+        //get department by id
         public async Task<DepartmentDto> GetDepartmentsAsync(int deptId)
         {
             var dept = await _context.Departments.FindAsync(deptId);
@@ -35,7 +37,7 @@ namespace PracticesAPI.Service
                 DeptName = dept.DeptName
             };
         }
-
+        //create department
         public async Task<DepartmentDto> CreateDepartmentAsync(DepartmentDto department)
         {
             var dept = new Department
@@ -50,7 +52,7 @@ namespace PracticesAPI.Service
                 DeptName = dept.DeptName
             };
         }
-
+        //update department
         public async Task<bool> UpdateDepartmentAsync(int deptId, DepartmentDto department)
         {
             var dept = await _context.Departments.FindAsync(deptId);
@@ -62,7 +64,7 @@ namespace PracticesAPI.Service
             await _context.SaveChangesAsync();
             return true;
         }
-
+        //delete department
         public async Task<bool> DeleteDepartmentAsync(int deptId)
         {
             var dept = await _context.Departments.FindAsync(deptId);
